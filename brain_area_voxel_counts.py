@@ -2,7 +2,7 @@ import nibabel as nib
 import numpy as np
 import pandas as pd
 
-path_data = r'C:\Users\hbhwl\Desktop\Ketamine_MDD\Brainnetome_Atlas\BN_Atlas_246_2mm.nii'
+path_data = r'...\Brainnetome_Atlas\BN_Atlas_246_2mm.nii'
 
 img = nib.load(path_data)
 data = img.get_fdata()
@@ -17,5 +17,6 @@ for value, count in zip(unique_values, counts):
 result_df.to_csv(r'C:/Users/hbhwl/Desktop/Ketamine_MDD/Brainnetome_Atlas/brain_area_voxel_counts.csv', index=False)
 
 result_df.to_excel(r'C:/Users/hbhwl/Desktop/Ketamine_MDD/Brainnetome_Atlas/brain_area_voxel_counts.xlsx', index=False)
+
 
 
